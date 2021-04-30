@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>js时分秒毫秒</title>
+	<style>
+		.box{
+	     height: 200px;
+		 width: 200px;
+		 color: chartreuse;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">00:00:00:000
+
+	<script>
+		let box = document.getElementById('box');
+		let Interval;
+		setInterval(timer,50);
+
+		function timer() {
+			var dateTime = new Date();
+			var hours = dateTime.getHours();
+			var minutes = dateTime.getMinutes();
+			var seconds = dateTime.getSeconds();
+			var millisecond = dateTime.getMilliseconds();
+			millisecond = millisecond%1000;
+			box.innerHTML=hours + ':' + minutes + ':' + seconds + ':  ' + millisecond;
+		}
+	</script>
+	</div>
+</body>
+
+</html>
